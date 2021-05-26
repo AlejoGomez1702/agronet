@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { CategoriesService } from 'src/app/services/categories.service';
+import { ProductserviceService } from 'src/app/services/productservice.service';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 import { UsuarioserviceService } from 'src/app/services/usuarioservice.service';
 import { Product } from '../../interfaces/interfaces';
@@ -25,7 +28,9 @@ export class ProductoComponent implements OnInit {
   };
   constructor(
     private shoppingCartService: ShoppingCartService,
-    public usuarioService: UsuarioserviceService
+    public usuarioService: UsuarioserviceService,
+    private productService: ProductserviceService,
+    private toastrService: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -47,6 +52,15 @@ export class ProductoComponent implements OnInit {
   addProduct(product: Product)
   {
     this.shoppingCartService.addProduct(product);
+  }
+
+  deleteProduct(id)
+  {
+    this.productService.delete(id).subscribe(
+      res => {
+        this.toastrService.success("Borrado correctamente", "Producto");
+      }
+    );
   }
 
 }

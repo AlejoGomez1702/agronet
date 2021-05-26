@@ -18,4 +18,9 @@ export class ProductserviceService {
     return this.http.get<any>(this.urlApi+'products/'+id);
   }
 
+  delete(id)
+  {
+    return this.http.delete<any>(this.urlApi+'products/'+id);
+  }
+
 }
