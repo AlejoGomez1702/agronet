@@ -69,4 +69,9 @@ serProducer(){
   );
 }
 
+newProducto()
+{
+  this.router.navigate(['create-product']);
+}
+
 }
