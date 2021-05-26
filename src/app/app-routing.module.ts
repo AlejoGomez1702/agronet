@@ -6,12 +6,12 @@ import { MainComponent } from './components/events/main/main.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
-import { IniciologComponent } from './components/userLog/iniciolog/iniciolog.component';
 import {ProducerGuard} from './guards/producer.guard';
 
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { InicioGuard } from './guards/inicio.guard';
 import { CreateProductComponent } from './components/create-product/create-product.component';
+import { IniciologComponent } from './components/userLog/iniciolog/iniciolog.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/inicio', pathMatch: 'full' },
