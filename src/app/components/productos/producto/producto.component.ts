@@ -24,7 +24,8 @@ export class ProductoComponent implements OnInit {
     updated_at: ""
   };
   constructor(
-    private shoppingCartService: ShoppingCartService,private usuarioService: UsuarioserviceService
+    private shoppingCartService: ShoppingCartService,
+    public usuarioService: UsuarioserviceService
   ) { }
 
   ngOnInit(): void {
