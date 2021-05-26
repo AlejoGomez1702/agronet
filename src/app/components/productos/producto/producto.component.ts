@@ -64,6 +64,7 @@ export class ProductoComponent implements OnInit {
     this.productService.delete(id).subscribe(
       res => {
         this.toastrService.success("Borrado correctamente", "Producto");
+        this.router.navigate(['/inicio']);
       }
     );
   }

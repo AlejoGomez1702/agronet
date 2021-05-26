@@ -40,7 +40,13 @@ export class ProductserviceService {
 
   delete(id)
   {
-    return this.http.delete<any>(this.urlApi+'products/'+id);
+    const headers = new HttpHeaders(
+      {
+        'Authorization':'Bearer '+localStorage.getItem("token"),
+        'Accept':'application/json',
+        'content-type': 'application/json'
+      });
+    return this.http.delete<any>(this.urlApi+'products/'+id, { headers });
   }
 
 }
