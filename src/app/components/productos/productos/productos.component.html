@@ -1,0 +1,9 @@
+<ul class="navbar-nav rounded ml-auto">
+    <nav class="navbar navbar-dark bg-light" >
+    </nav>
+</ul>       
+<div class="row">
+    <div class="col-sm-3 mt-3" *ngFor="let product of products">
+        <app-producto [product]="product"></app-producto>
+    </div>
+</div>
