@@ -27,6 +27,7 @@ import { PerfilComponent } from './components/modals/perfil/perfil.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import {MatSelectModule} from '@angular/material/select';
+import { IniciologComponent } from './components/userLog/iniciolog/iniciolog.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {MatSelectModule} from '@angular/material/select';
     ContactenosComponent,
     PerfilComponent,
     ShoppingCartComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    IniciologComponent
   ],
   imports: [
     CommonModule,
