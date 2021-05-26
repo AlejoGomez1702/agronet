@@ -25,7 +25,8 @@ import { NosotrosComponent } from './components/modals/nosotros/nosotros.compone
 import { ContactenosComponent } from './components/modals/contactenos/contactenos.component';
 import { PerfilComponent } from './components/modals/perfil/perfil.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
-import { CreateproductComponent } from './components/createproduct/createproduct.component';
+import { CreateProductComponent } from './components/create-product/create-product.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { CreateproductComponent } from './components/createproduct/createproduct
     ContactenosComponent,
     PerfilComponent,
     ShoppingCartComponent,
-    CreateproductComponent 
+    CreateProductComponent
   ],
   imports: [
     CommonModule,
@@ -56,6 +57,7 @@ import { CreateproductComponent } from './components/createproduct/createproduct
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSelectModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       progressBar: true,
