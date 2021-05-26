@@ -38,4 +38,9 @@ export class ProductserviceService {
     return this.http.put<any>(this.urlApi + 'products/'+product.data.id, product, { headers });
   }
 
+  delete(id)
+  {
+    return this.http.delete<any>(this.urlApi+'products/'+id);
+  }
+
 }

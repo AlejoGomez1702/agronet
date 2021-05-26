@@ -32,10 +32,10 @@
                 </button>
             </div>
             <div class="col-sm-6">
-                <a  type="button" mat-raised-button color="danger">
+                <button type="button" mat-raised-button color="danger" (click)="deleteProduct(product.id)">
                     Eliminar
                     <mat-icon>delete</mat-icon>
-                </a>
+                </button>
             </div>
         </div>
     </div>
