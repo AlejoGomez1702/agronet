@@ -34,9 +34,17 @@ export class CreateProductComponent implements OnInit {
 
   buildForm() {
     this.form = this.formBuilder.group({
+      type: ['Product'],
+      attributes: {
+        producer_id: [{
+            value: localStorage.getItem('slug'),
+          },
+        ],
+        category_id: []
+      },
       nombre: [''],
       descripcion: [''],
-      categoria: [''],
+      categoria: [''], 
       precio: ['']
     });
   }
