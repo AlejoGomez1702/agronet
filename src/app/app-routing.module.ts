@@ -11,6 +11,7 @@ import {ProducerGuard} from './guards/producer.guard';
 
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { InicioGuard } from './guards/inicio.guard';
+import { CreateProductComponent } from './components/create-product/create-product.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/inicio', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'eventCreate', component: CreateComponent, canActivate:[ProducerGuard] },
   { path: 'eventVer', component: MainComponent,canActivate:[InicioGuard] },
   { path: 'inicioLog', component: IniciologComponent, canActivate:[InicioGuard] },
-  { path: 'carrito', component: ShoppingCartComponent,canActivate:[InicioGuard]}
+  { path: 'carrito', component: ShoppingCartComponent,canActivate:[InicioGuard]},
+  { path: 'create-product', component: CreateProductComponent}
  
 ];
 
