@@ -26,7 +26,7 @@
         </div>
         <div class="row mt-4" *ngIf="usuarioService.isAuth">
             <div class="col-sm-6">
-                <button mat-raised-button color="warning" (click)="addProduct(product)">
+                <button mat-raised-button color="warning" (click)="updateProduct(product.id)">
                     Editar
                     <mat-icon>edit</mat-icon>
                 </button>

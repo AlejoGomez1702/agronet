@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'eventVer', component: MainComponent,canActivate:[InicioGuard] },
   { path: 'inicioLog', component: IniciologComponent, canActivate:[InicioGuard] },
   { path: 'carrito', component: ShoppingCartComponent,canActivate:[InicioGuard]},
-  { path: 'create-product', component: CreateProductComponent}
+  { path: 'create-product', component: CreateProductComponent},
+  { path: 'create-product/:id', component: CreateProductComponent}
  
 ];
 
