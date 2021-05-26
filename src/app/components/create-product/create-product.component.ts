@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { CategoriesService } from 'src/app/services/categories.service';
 interface Categoria {
   value: string;
   viewValue: string;
@@ -13,15 +14,26 @@ interface Categoria {
 export class CreateProductComponent implements OnInit {
 
   form: FormGroup;
-  categorias: Categoria[] = [
-    {value: 'electrodomestico', viewValue: 'Electrodomestico'},
-    {value: 'muebles', viewValue: 'Muebles'},
-    {value: 'decoracion', viewValue: 'Descoracion'}
+  public categorias: any[] = [
+    // {value: 'electrodomestico', viewValue: 'Electrodomestico'},
+    // {value: 'muebles', viewValue: 'Muebles'},
+    // {value: 'decoracion', viewValue: 'Descoracion'}
   ];
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private categoriesService: CategoriesService) { }
 
   ngOnInit(): void {
     this.buildForm();
+    this.loadCategories();
+
+  }
+
+  loadCategories()
+  {
+    this.categoriesService.getAll().subscribe(
+      res => {
+        this.categorias = res.data
+      }
+    );
   }
 
   createProduct() {

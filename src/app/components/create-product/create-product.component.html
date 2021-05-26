@@ -14,10 +14,10 @@
 
             <h3>Selecciona la categoría de tu producto</h3>
             <mat-form-field appearance="fill">
-                <mat-label>Favorite food</mat-label>
+                <mat-label>Categoria</mat-label>
                 <mat-select formControlName="categoria">
-                    <mat-option *ngFor="let categoria of categorias" [value]="categoria.value">
-                    {{categoria.viewValue}}
+                    <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">
+                    {{categoria.attributes.category_name}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
